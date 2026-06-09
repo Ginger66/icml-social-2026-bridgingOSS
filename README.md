@@ -1,4 +1,4 @@
-# Bridging Research and Open-Source — ICML 2026 Social
+# Bridging Research and Open Source — ICML 2026 Social
 
 A social event at **ICML 2026** for the ML open-source community: bringing together OSS maintainers, contributors, and researchers for an evening of informal exchange.
 
@@ -15,7 +15,7 @@ A social event at **ICML 2026** for the ML open-source community: bringing toget
 
 ## OSS Projects Represented
 
-vLLM-Omni · openYuanrong · verl-omni · openJiuwen — with more to be announced.
+vLLM-Omni · openYuanrong · verl-omni · openJiuwen — with more to be announced
 
 ## Call for Talks
 
@@ -24,26 +24,8 @@ Maintainers and contributors from any ML-related open-source project are welcome
 ## Organizers
 
 **Leads**
-- **Zijie Zhou** — Assistant Professor, HKUST IEDA — [jerryzhou@ust.hk](mailto:jerryzhou@ust.hk)
+- **Prof. Zijie Zhou** — Assistant Professor, HKUST IEDA — [jerryzhou@ust.hk](mailto:jerryzhou@ust.hk)
 - **Dr. Yongxiang Huang** — Research Scientist, Huawei — [huang.yongxiang2@huawei.com](mailto:huang.yongxiang2@huawei.com)
 
 **Supporting Team**
-- Hongsheng Liu — Huawei — [liuhongsheng4@huawei.com](mailto:liuhongsheng4@huawei.com)
-- Dr. Fengmei Jin — Huawei Hong Kong Research Center — [jin.fengmei@huawei.com](mailto:jin.fengmei@huawei.com)
-
-## Updating This Site
-
-The site is a single static `index.html` published via GitHub Pages from the `main` branch. To update:
-
-```bash
-# edit index.html, then:
-git add index.html
-git commit -m "your message"
-git push
-```
-
-GitHub Pages will pick up the change within a minute.
-
----
-
-Questions? Contact [jerryzhou@ust.hk](mailto:jerryzhou@ust.hk).
+- Dr. Fengmei Jin — Huawei — [jin.fengmei@huawei.com](mailto:jin.fengmei@huawei.com)
