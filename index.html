@@ -251,6 +251,23 @@
     p:last-child { margin-bottom: 0; }
     p strong { color: var(--text); }
 
+    /* Justify long-form description paragraphs */
+    section p,
+    .about-card p,
+    .timeline-content p,
+    .organizer-info p,
+    .highlight-box,
+    details p {
+      text-align: justify;
+      text-justify: inter-word;
+      hyphens: auto;
+    }
+    /* Keep centered contexts centered */
+    .hero p,
+    .register-box p,
+    footer p { text-align: center; }
+    .projects-note { text-align: left; }
+
     .divider {
       border: none;
       border-top: 1px solid var(--border);
@@ -474,7 +491,46 @@
     .organizer-info p {
       font-size: 0.82rem;
       color: var(--text-muted);
-      margin: 0;
+      margin: 0 0 0.5rem;
+    }
+
+    .organizer-info .org-email {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      color: var(--text-dim);
+      text-decoration: none;
+      word-break: break-all;
+      transition: color 0.15s;
+    }
+    .organizer-info .org-email:hover { color: var(--accent); }
+
+    .organizers-subheading {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      font-weight: 500;
+      color: var(--text-dim);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin: 2.25rem 0 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .organizers-subheading::before,
+    .organizers-subheading::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    .organizers-grid-compact { margin-top: 0.5rem; }
+    .organizers-grid-compact .organizer-card { padding: 1.15rem 1.25rem; }
+    .organizers-grid-compact .organizer-avatar {
+      width: 40px;
+      height: 40px;
+      font-size: 0.95rem;
+      background: linear-gradient(135deg, var(--text-dim), var(--accent));
     }
 
     /* ─── REGISTER CTA ─────────────────────────────────── */
@@ -600,8 +656,9 @@
   <a class="nav-logo" href="#">OSS × ML @ ICML '26</a>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
-    <li><a href="#format">Format</a></li>
     <li><a href="#projects">Projects</a></li>
+    <li><a href="#call-for-talks">Call for Talks</a></li>
+    <li><a href="#format">Format</a></li>
     <li><a href="#organizers">Organizers</a></li>
     <li><a href="#register">Register</a></li>
   </ul>
@@ -618,15 +675,15 @@
     <div class="hero-meta">
       <div class="meta-pill">
         <span class="icon">📅</span>
-        <span><strong>TBD</strong> · July 2026</span>
+        <span><strong>Date TBD</strong> · July 2026</span>
       </div>
       <div class="meta-pill">
         <span class="icon">📍</span>
-        <span><strong>TBD</strong> · ICML 2026 Venue</span>
+        <span><strong>COEX Convention &amp; Exhibition Center</strong> · Seoul · Room TBD</span>
       </div>
       <div class="meta-pill">
         <span class="icon">🕖</span>
-        <span>Evening · ~3 hours</span>
+        <span><strong>19:00 – 21:00</strong> · 2 hours</span>
       </div>
       <div class="meta-pill">
         <span class="icon">🆓</span>
@@ -681,6 +738,81 @@
 
 <hr class="divider" />
 
+<!-- ─── PROJECTS ───────────────────────────────────────────── -->
+<section id="projects">
+  <div class="section-label">// Featured Projects</div>
+  <h2>OSS Projects in the Room</h2>
+  <p>Maintainers and contributors from across the ML open-source ecosystem will be present. Projects span the full stack of modern ML infrastructure.</p>
+
+  <div class="projects-grid">
+    <a class="project-card" href="https://github.com/vllm-project/vllm-omni" target="_blank" rel="noopener">
+      <div class="project-tag tag-inference">Inference</div>
+      <div class="project-name">vLLM-Omni</div>
+      <div class="project-desc">Multimodal extension of the vLLM ecosystem</div>
+    </a>
+
+    <a class="project-card" href="https://www.openeuler.org/en/projects/yuanrong/" target="_blank" rel="noopener">
+      <div class="project-tag tag-compute">Distributed</div>
+      <div class="project-name">openYuanrong</div>
+      <div class="project-desc">Open distributed computing runtime for ML</div>
+    </a>
+
+    <a class="project-card" href="https://github.com/verl-project/verl-omni" target="_blank" rel="noopener">
+      <div class="project-tag tag-training">Training</div>
+      <div class="project-name">verl-omni</div>
+      <div class="project-desc">Multimodal RL training framework extending verl</div>
+    </a>
+
+    <a class="project-card" href="https://openjiuwen.com/en/" target="_blank" rel="noopener">
+      <div class="project-tag tag-agent">Agent</div>
+      <div class="project-name">openJiuwen</div>
+      <div class="project-desc">Open agent framework for complex reasoning tasks</div>
+    </a>
+
+    <div class="project-card" style="border-style: dashed; cursor: default;">
+      <div class="project-tag tag-eval">Your Project?</div>
+      <div class="project-name">+ More</div>
+      <div class="project-desc">Additional projects TBA — see Call for Talks below</div>
+    </div>
+  </div>
+
+  <p class="projects-note">
+    Maintaining an ML OSS project and want to participate? See the Call for Talks below — all project maintainers are welcome.
+  </p>
+</section>
+
+<hr class="divider" />
+
+<!-- ─── CALL FOR TALKS ─────────────────────────────────────── -->
+<section id="call-for-talks">
+  <div class="section-label">// Call for Talks</div>
+  <h2>Your Open-Source Project Belongs Here</h2>
+
+  <p>
+    The projects above are just a starting point. We actively want to hear from <strong>any open-source community working on ML infrastructure</strong> — inference, training, distributed systems, agents, evaluation, data pipelines, RL frameworks, multimodal stacks, or anything else that shapes how modern ML gets built. If your community is not on the list yet, this section is for you.
+  </p>
+  <p>
+    Lightning talks are short (<strong>3–5 minutes</strong>), informal, and intentionally low-overhead. No slides required, no polished pitch expected — just bring what you're building, what's hard about it, and how the research community can help. We especially welcome early-stage projects, academic OSS efforts, and maintainers from underrepresented regions and institutions.
+  </p>
+
+  <div class="about-grid" style="margin-top: 2rem;">
+    <div class="about-card">
+      <h3>🎤 Who can apply</h3>
+      <p>Any maintainer, contributor, or steward of an open-source ML-related project. Independent developers, academic labs, industry teams, and community-run projects are all equally welcome.</p>
+    </div>
+    <div class="about-card">
+      <h3>📝 How to submit</h3>
+      <p>Email the organizers a one-paragraph description of your project and what you'd like to share. Submissions are reviewed on a rolling basis until the lightning-talk slate is full.</p>
+    </div>
+  </div>
+
+  <div class="highlight-box" style="margin-top: 1.5rem;">
+    <strong>Deadline:</strong> Rolling, until slots fill — earlier submissions get priority. Reach out via <a href="mailto:jerryzhou@ust.hk" style="color: var(--accent-green); text-decoration: underline;">the organizers' email</a> with subject line <span class="mono">[ICML 2026 Social — Talk]</span>.
+  </div>
+</section>
+
+<hr class="divider" />
+
 <!-- ─── FORMAT ─────────────────────────────────────────────── -->
 <section id="format">
   <div class="section-label">// Format</div>
@@ -691,100 +823,32 @@
     <div class="timeline-item active">
       <div class="timeline-dot">★</div>
       <div class="timeline-content">
-        <h3>Welcome & Opening Remarks <span class="time-badge">~10 min</span></h3>
+        <h3>Welcome &amp; Opening Remarks <span class="time-badge">19:00 · 10 min</span></h3>
         <p>Brief framing of the social's goals and why we're here.</p>
       </div>
     </div>
     <div class="timeline-item active">
       <div class="timeline-dot">⚡</div>
       <div class="timeline-content">
-        <h3>Lightning Talks from OSS Maintainers <span class="time-badge">~40 min</span></h3>
+        <h3>Lightning Talks from OSS Maintainers <span class="time-badge">19:10 · 40 min</span></h3>
         <p>Fast-paced 3–5 minute talks from a diverse set of open-source project maintainers — covering what they're building, what challenges they face, and how the research community can help.</p>
       </div>
     </div>
     <div class="timeline-item active">
       <div class="timeline-dot">💬</div>
       <div class="timeline-content">
-        <h3>Open Discussion <span class="time-badge">~20 min</span></h3>
+        <h3>Open Discussion <span class="time-badge">19:50 · 20 min</span></h3>
         <p>Shared themes, cross-project questions, and community-wide challenges. Lightly moderated, attendee-driven.</p>
       </div>
     </div>
     <div class="timeline-item active">
       <div class="timeline-dot">🥂</div>
       <div class="timeline-content">
-        <h3>Networking over Refreshments <span class="time-badge">~90 min</span></h3>
+        <h3>Networking over Refreshments <span class="time-badge">20:10 · 50 min</span></h3>
         <p>Open mingling with project tables. Find the maintainers you've been meaning to talk to. Light refreshments provided.</p>
       </div>
     </div>
   </div>
-</section>
-
-<hr class="divider" />
-
-<!-- ─── PROJECTS ───────────────────────────────────────────── -->
-<section id="projects">
-  <div class="section-label">// Featured Projects</div>
-  <h2>OSS Projects in the Room</h2>
-  <p>Maintainers and contributors from across the ML open-source ecosystem will be present. Projects span the full stack of modern ML infrastructure.</p>
-
-  <div class="projects-grid">
-    <!-- Inference Engines -->
-    <a class="project-card" href="https://github.com/vllm-project/vllm" target="_blank" rel="noopener">
-      <div class="project-tag tag-inference">Inference</div>
-      <div class="project-name">vLLM</div>
-      <div class="project-desc">High-throughput LLM serving with PagedAttention</div>
-    </a>
-    <a class="project-card" href="https://github.com/sgl-project/sglang" target="_blank" rel="noopener">
-      <div class="project-tag tag-inference">Inference</div>
-      <div class="project-name">SGLang</div>
-      <div class="project-desc">Structured generation language for LLMs</div>
-    </a>
-    <a class="project-card" href="#" class="project-card">
-      <div class="project-tag tag-inference">Inference</div>
-      <div class="project-name">vLLM-Omni</div>
-      <div class="project-desc">Multimodal extension of the vLLM ecosystem</div>
-    </a>
-
-    <!-- Distributed Compute -->
-    <a class="project-card" href="https://github.com/ray-project/ray" target="_blank" rel="noopener">
-      <div class="project-tag tag-compute">Distributed</div>
-      <div class="project-name">Ray</div>
-      <div class="project-desc">Unified framework for scalable ML workloads</div>
-    </a>
-    <div class="project-card">
-      <div class="project-tag tag-compute">Distributed</div>
-      <div class="project-name">openYuanrong</div>
-      <div class="project-desc">Open distributed computing runtime for ML</div>
-    </div>
-
-    <!-- Agent Frameworks -->
-    <a class="project-card" href="https://github.com/langchain-ai/langchain" target="_blank" rel="noopener">
-      <div class="project-tag tag-agent">Agent</div>
-      <div class="project-name">LangChain</div>
-      <div class="project-desc">Framework for composing LLM-powered applications</div>
-    </a>
-    <a class="project-card" href="https://github.com/microsoft/autogen" target="_blank" rel="noopener">
-      <div class="project-tag tag-agent">Agent</div>
-      <div class="project-name">AutoGen</div>
-      <div class="project-desc">Multi-agent conversation framework by Microsoft</div>
-    </a>
-    <div class="project-card">
-      <div class="project-tag tag-agent">Agent</div>
-      <div class="project-name">openJiuwen</div>
-      <div class="project-desc">Open agent framework for complex reasoning tasks</div>
-    </div>
-
-    <!-- More -->
-    <div class="project-card" style="border-style: dashed; cursor: default;">
-      <div class="project-tag tag-training">Training / Eval</div>
-      <div class="project-name">+ More</div>
-      <div class="project-desc">Additional projects TBA as speakers confirm</div>
-    </div>
-  </div>
-
-  <p class="projects-note">
-    Maintaining an ML OSS project and want to participate? See registration below — all project maintainers are welcome.
-  </p>
 </section>
 
 <hr class="divider" />
@@ -799,16 +863,40 @@
       <div class="organizer-avatar">ZZ</div>
       <div class="organizer-info">
         <h3>Zijie Zhou</h3>
-        <div class="org">HKUST</div>
-        <p>Researcher at the Hong Kong University of Science and Technology. Active at the intersection of ML systems and open-source infrastructure.</p>
+        <div class="org">Assistant Professor · HKUST IEDA</div>
+        <p>Works at the intersection of operations research and AI systems — applying online optimization, scheduling, queueing, and resource allocation to make LLM inference faster and more cost-efficient (ICML 2026 position paper). Also works on EDA, advanced semiconductor (RDL) packaging, and classical OR topics like revenue management and online learning.</p>
+        <a class="org-email" href="mailto:jerryzhou@ust.hk">jerryzhou@ust.hk</a>
       </div>
     </div>
+    <div class="organizer-card">
+      <div class="organizer-avatar">YH</div>
+      <div class="organizer-info">
+        <h3>Dr. Yongxiang Huang</h3>
+        <div class="org">Research Scientist · Huawei</div>
+        <p>Research scientist at Huawei. Core contributor to <strong>verl-omni</strong> and <strong>vLLM-Omni</strong> — multimodal RL training and inference systems for large foundation models.</p>
+        <a class="org-email" href="mailto:huang.yongxiang2@huawei.com">huang.yongxiang2@huawei.com</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="organizers-subheading">Supporting Team</div>
+  <div class="organizers-grid organizers-grid-compact">
     <div class="organizer-card">
       <div class="organizer-avatar">HL</div>
       <div class="organizer-info">
         <h3>Hongsheng Liu</h3>
         <div class="org">Huawei</div>
-        <p>ML systems researcher and open-source contributor at Huawei. Working on distributed training and inference runtimes for large-scale models.</p>
+        <p>ML systems engineer at Huawei. Works on distributed training and inference runtimes for large-scale models.</p>
+        <a class="org-email" href="mailto:liuhongsheng4@huawei.com">liuhongsheng4@huawei.com</a>
+      </div>
+    </div>
+    <div class="organizer-card">
+      <div class="organizer-avatar">FJ</div>
+      <div class="organizer-info">
+        <h3>Dr. Fengmei Jin</h3>
+        <div class="org">Huawei Hong Kong Research Center</div>
+        <p>Senior Technology Cooperation Manager. Bridges university research, open-source communities, and product engineering across AI compilers, model training and inference, and data+AI infrastructure.</p>
+        <a class="org-email" href="mailto:jin.fengmei@huawei.com">jin.fengmei@huawei.com</a>
       </div>
     </div>
   </div>
@@ -826,7 +914,7 @@
     </p>
     <div class="hero-cta">
       <a href="#" class="btn btn-primary">✦ Register Now</a>
-      <a href="mailto:placeholder@example.com" class="btn btn-outline">📧 Contact Organizers</a>
+      <a href="mailto:jerryzhou@ust.hk" class="btn btn-outline">📧 Contact Organizers</a>
     </div>
     <p style="margin-top: 1.5rem; font-size: 0.8rem; color: var(--text-dim);">
       Registration link will be live shortly. Contact the organizers if you'd like to give a lightning talk.
@@ -858,7 +946,11 @@
     </details>
     <details>
       <summary>Where exactly will it be held?</summary>
-      <p>Venue details will be announced as ICML 2026 logistics are finalized. Check back here or register to receive updates via email.</p>
+      <p>The social will take place at the main ICML 2026 venue — <strong>COEX Convention &amp; Exhibition Center, Seoul, South Korea</strong>. The specific room is still being finalized; check back here or register to receive the room assignment by email once ICML publishes the social program.</p>
+    </details>
+    <details>
+      <summary>What time does it start?</summary>
+      <p>The social runs <strong>19:00 – 21:00</strong> (2 hours) on an evening during ICML 2026 week. The exact date will be announced once the main conference program is published.</p>
     </details>
   </div>
 </section>
@@ -867,8 +959,9 @@
 <footer>
   <p>
     <strong style="color: var(--text-muted);">Bridging Research and Open-Source: A Social for the ML Open-Source Community</strong><br>
-    ICML 2026 · Organized by Zijie Zhou (HKUST) &amp; Hongsheng Liu (Huawei)<br><br>
-    Questions? <a href="mailto:placeholder@example.com">Contact the organizers</a>
+    ICML 2026 · Organized by Zijie Zhou (HKUST) &amp; Dr. Yongxiang Huang (Huawei)<br>
+    With support from Hongsheng Liu and Dr. Fengmei Jin (Huawei)<br><br>
+    Questions? <a href="mailto:jerryzhou@ust.hk">Contact the organizers</a>
   </p>
 </footer>
 
