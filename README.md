@@ -19,13 +19,16 @@ vLLM-Omni · openYuanrong · verl-omni · openJiuwen — with more to be announc
 
 ## Call for Talks
 
-Maintainers and contributors from any ML-related open-source project are welcome to give a 3–5 minute lightning talk. Email a one-paragraph project description to the organizers with subject line `[ICML 2026 Social — Talk]`. Reviewed on a rolling basis.
+Maintainers and contributors from any ML-related open-source project are welcome to give a 3–5 minute lightning talk. Email a one-paragraph project description to the organizers with a subject line `[ICML 2026 Social — Talk Proposal]`. Reviewed on a rolling basis.
 
 ## Organizers
 
 **Leads**
-- **Prof. Zijie Zhou** — Assistant Professor, HKUST IEDA — [jerryzhou@ust.hk](mailto:jerryzhou@ust.hk)
 - **Dr. Yongxiang Huang** — Research Scientist, Huawei — [huang.yongxiang2@huawei.com](mailto:huang.yongxiang2@huawei.com)
+- **Prof. Zijie Zhou** — Assistant Professor, HKUST IEDA — [jerryzhou@ust.hk](mailto:jerryzhou@ust.hk)
 
 **Supporting Team**
-- Dr. Fengmei Jin — Huawei — [jin.fengmei@huawei.com](mailto:jin.fengmei@huawei.com)
+- **Dr. Fengmei Jin** — Huawei — [jin.fengmei@huawei.com](mailto:jin.fengmei@huawei.com)
+
+
+*Questions? Contact Fengmei by email!*
