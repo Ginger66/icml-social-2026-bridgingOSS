@@ -962,7 +962,28 @@
     With support from Dr. Fengmei Jin (Huawei)<br><br>
     Questions? <a href="mailto:jin.fengmei@huawei.com">Contact the organizers</a>
   </p>
+  <div id="visit-counter" style="margin-top:1.2rem; font-size:0.68rem; letter-spacing:0.04em; color:var(--text-dim); opacity:0.45;"></div>
 </footer>
+
+<!-- subtle per-session visit counter (counterapi.dev, no signup) -->
+<script>
+(function () {
+  var NS = 'icml-social-2026-bridgingoss';
+  var KEY = 'pageviews';
+  var base = 'https://api.counterapi.dev/v1/' + NS + '/' + KEY + '/';
+  var el = document.getElementById('visit-counter');
+  // increment once per browser session, otherwise just read the current value
+  var counted = sessionStorage.getItem('visit-counted');
+  var url = counted ? base : base + 'up';
+  fetch(url)
+    .then(function (r) { return r.json(); })
+    .then(function (d) {
+      if (!counted) sessionStorage.setItem('visit-counted', '1');
+      if (d && typeof d.count === 'number') el.textContent = d.count + ' visits';
+    })
+    .catch(function () { /* stay silent if the counter is unreachable */ });
+})();
+</script>
 
 </body>
 </html>
