@@ -14,6 +14,7 @@ A social event at **ICML 2026** for the ML open-source community: bringing toget
 | **Where** | COEX Convention & Exhibition Center, Seoul, South Korea · **ROOM E1 - E4** |
 | **Cost** | Free · Open to all ICML 2026 attendees |
 | **Format** | Lightning talks (3–5 min) · Open discussion · Networking with refreshments |
+| **Register** | [Sign up via Google Form](https://docs.google.com/forms/d/e/1FAIpQLSflHESF51sxAgMfkUlcmKvbgAnKsK8yVhn4ej0esrUqt3VEzw/viewform) |
 
 ## OSS Projects Represented
 
