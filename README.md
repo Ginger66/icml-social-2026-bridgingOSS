@@ -26,8 +26,8 @@ Maintainers and contributors from any ML-related open-source project are welcome
 ## Organizers
 
 **Leads**
-- **Dr. Yongxiang Huang** — Research Scientist, Huawei — [huang.yongxiang2@huawei.com](mailto:huang.yongxiang2@huawei.com)
 - **Prof. Zijie Zhou** — Assistant Professor, HKUST IEDA — [jerryzhou@ust.hk](mailto:jerryzhou@ust.hk)
+- **Dr. Yongxiang Huang** — Research Scientist, Huawei — [huang.yongxiang2@huawei.com](mailto:huang.yongxiang2@huawei.com)
 
 **Supporting Team**
 - **Dr. Fengmei Jin** — Huawei — [jin.fengmei@huawei.com](mailto:jin.fengmei@huawei.com)
