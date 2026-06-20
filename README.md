@@ -3,6 +3,7 @@
 A social event at **ICML 2026** for the ML open-source community: bringing together OSS maintainers, contributors, and researchers for an evening of informal exchange.
 
 **Live site:** https://ginger66.github.io/icml-social-2026-bridgingOSS/
+
 **Site @ ICML:** https://icml.cc/virtual/2026/social/80676
 
 ## Event at a Glance
